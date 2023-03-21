@@ -4,6 +4,7 @@ public class Main {
         Usuario usuario = new Usuario();
         Algoritmo algoritmo = new Algoritmo();
         Juego juego = new Juego(usuario, algoritmo);
+
         juego.intro();
         juego.primerTurno();
         System.out.println(juego.imprimirChocolates());

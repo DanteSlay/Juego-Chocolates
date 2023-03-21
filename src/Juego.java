@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class Juego {
     //ATRIBUTOS
+    private final int FRESA = 3;
+    private final int CHOCO_LIBRES = 0;
     private final int CHOCO_IA = 2;
     private final int CHOCO_USUARIO = 1;
     private final int MAX_CHOCO = 14;
@@ -74,10 +76,10 @@ public class Juego {
         StringBuilder sb = new StringBuilder();
         ArrayList<Integer> chocolatesPantalla = chocolatesPantalla();
         for (int i = 0; i < chocolatesPantalla.size(); i++) {
-            if (!(i == 5 || i == 10)) {
-                sb.append(Utilidades.emoji(chocolatesPantalla.get(i))).append(" ");
-            } else if (i == 5 || i == 10) {
+            if (i == 5 || i == 10) {
                 sb.append("\n");
+                sb.append(Utilidades.emoji(chocolatesPantalla.get(i))).append(" ");
+            } else {
                 sb.append(Utilidades.emoji(chocolatesPantalla.get(i))).append(" ");
             }
         }
@@ -87,10 +89,10 @@ public class Juego {
     private ArrayList<Integer> chocolatesPantalla() {
         ArrayList<Integer> chocolatesPantalla = new ArrayList<>();
         chocolatesPantalla.addAll(chocolates);
-        while (chocolatesPantalla.size() < 13) {
-            chocolatesPantalla.add(0);
+        while (chocolatesPantalla.size() < MAX_CHOCO - 1) {
+            chocolatesPantalla.add(CHOCO_LIBRES);
         }
-        chocolatesPantalla.add(3);
+        chocolatesPantalla.add(FRESA);
 
         return chocolatesPantalla;
     }
