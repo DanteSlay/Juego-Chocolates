@@ -55,18 +55,18 @@ public class Juego {
         System.out.println("\nTu turno:");
         usuario.pedirEleccion(MAX_CHOCO - chocolates.size());
         usuario.comerChocolates();
-        for (int i = 0; i < usuario.numChocolates; i++) {
+        for (int i = 0; i < usuario.numChocolates(); i++) {
             chocolates.add(CHOCO_USUARIO);
         }
     }
 
     public void turnoAlgoritmo(int posicion) {
         System.out.println("\nTurno del algoritmo...");
-        algoritmo.numChocolates = posicion - chocolates.size();
+        algoritmo.setNumChocolates(posicion - chocolates.size());
         for (int i = 0; i < algoritmo.numChocolates; i++) {
             chocolates.add(CHOCO_IA);
         }
-        System.out.println(algoritmo.numChocolates);
+        System.out.println(algoritmo.numChocolates());
 
     }
 

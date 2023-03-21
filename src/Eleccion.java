@@ -19,6 +19,9 @@ abstract class Eleccion {
         return opcion.getValor();
     }
 
+    public int numChocolates() {
+        return numChocolates;
+    }
     //SETTER
 
     public void setOpcion(Opcion opcion) {
