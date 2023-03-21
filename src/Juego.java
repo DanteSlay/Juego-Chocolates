@@ -9,7 +9,7 @@ public class Juego {
     private final int MAX_CHOCO = 14;
 
 
-    private final ArrayList<Integer> chocolates;
+    private  ArrayList<Integer> chocolates;
     private final Algoritmo algoritmo;
     private final Usuario usuario;
 
