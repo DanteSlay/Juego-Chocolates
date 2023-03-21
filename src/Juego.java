@@ -63,13 +63,20 @@ public class Juego {
     }
 
     public void turnoAlgoritmo(int posicion) throws InterruptedException {
-        System.out.println("\nTurno del algoritmo...");
-        Thread.sleep(2000);
+        System.out.print("\nTurno del algoritmo");
+        Thread.sleep(300);
+        System.out.print(".");
+        Thread.sleep(300);
+        System.out.print(".");
+        Thread.sleep(300);
+        System.out.print(".\n");
+        Thread.sleep(1000);
         algoritmo.setNumChocolates(posicion - chocolates.size());
         for (int i = 0; i < algoritmo.numChocolates; i++) {
             chocolates.add(CHOCO_IA);
         }
         System.out.println(algoritmo.numChocolates());
+        Thread.sleep(300);
 
     }
 
