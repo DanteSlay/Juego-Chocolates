@@ -31,10 +31,10 @@ public class Juego {
     //FUNCIONES
     public void intro(){
         while (true) {
-            String sb = "Evita comerte la fresa.\n" + Utilidades.emoji(3) +
+            String sb = "Evita comerte la fresa " + Utilidades.emoji(3) +
                     "\n" + "Los chocolates que te comas tu estan representados con " + Utilidades.emoji(1) +
                     "\n" + ", los del algoritmo con " + Utilidades.emoji(2) +
-                    "\nCuando sea tu turno, elige 1, 2 o 3 chocolates.\n" +
+                    "\n\nCuando sea tu turno, elige 1, 2 o 3 chocolates.\n" +
                     "Enter para empezar.";
             System.out.println(sb);
             String empezar = Utilidades.in.nextLine();
