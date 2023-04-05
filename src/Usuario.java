@@ -55,6 +55,7 @@ public class Usuario extends Eleccion {
     private static int eleccion() {
         int eleccion = Utilidades.in.nextInt();
         Utilidades.in.nextLine();
+
         return eleccion;
     }
 

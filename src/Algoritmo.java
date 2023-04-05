@@ -19,6 +19,7 @@ public class Algoritmo extends Eleccion{
         numChocolates = Opcion.TRES.getValor();
     }
 
+
 }
 
 
